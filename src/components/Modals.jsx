@@ -125,7 +125,7 @@ export const EditModal = ({ isOpen, onClose, connectionName, integrationName, on
     );
 };
 
-export const ViewModal = ({ isOpen, onClose, connectionName, integrationName, details }) => {
+export const ViewModal = ({ isOpen, onClose, connectionName, integrationName }) => {
     return (
         <Modal
             isOpen={isOpen}
@@ -145,10 +145,6 @@ export const ViewModal = ({ isOpen, onClose, connectionName, integrationName, de
             <div className="space-y-2 text-left">
                 <p><strong>Integration:</strong> {integrationName}</p>
                 <p><strong>Name:</strong> {connectionName}</p>
-                <p><strong>Source:</strong> {details?.source}</p>
-                <p><strong>Entity/Group:</strong> {details?.entityGroup}</p>
-                <p><strong>Interval:</strong> {details?.interval}</p>
-                <p><strong>Connector URL:</strong> <a href={details?.connectorUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline truncate block">{details?.connectorUrl}</a></p>
             </div>
         </Modal>
     );
